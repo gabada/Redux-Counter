@@ -12,6 +12,8 @@ class Counter extends Component {
     };
 
     incrementAsync = () => {
+        setTimeout(() => {
+            this.props.increment()}, 1000)
         // Stretch Problem: Implement an increment function that
         // increments after waiting for one second
     };
@@ -36,7 +38,7 @@ class Counter extends Component {
                 </button>
                 <button onClick={this.incrementAsync}>
                     Increment async
-                </button> 
+                </button>
             </p>
         );
     }
